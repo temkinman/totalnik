@@ -23,7 +23,7 @@ namespace WpfTotalnik
         private const string NOT_EXIST_LEFT_SIDE = "NOT_EXIST_LEFT_SIDE";
         private const string NOT_EXIST_RIGHT_SIDE = "NOT_EXIST_RIGHT_SIDE";
         private const string EQUAL_IMG = @"d:\pictures\equal.jpg";
-        private const string RIGHT_ARROW_IMG = @"d:\pictures\rightArrow2.jpg";
+        private const string RIGHT_ARROW_IMG = @"d:\pictures\rightArrow.jpg";
         private const string LEFT_ARROW_IMG = @"d:\pictures\leftArrow.jpg";
         private const string LEFT = "LEFT";
         private const string RIGHT = "RIGHT";
@@ -284,7 +284,6 @@ namespace WpfTotalnik
                 {
                     dirs.Push(str);
                 }
-                Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
             }
         }
 
