@@ -1,0 +1,130 @@
+D:\c#\WpfTotal\WpfTotalnik\bin\Debug\WpfTotalnik.exe.config
+D:\c#\WpfTotal\WpfTotalnik\bin\Debug\WpfTotalnik.exe
+D:\c#\WpfTotal\WpfTotalnik\bin\Debug\WpfTotalnik.pdb
+D:\c#\WpfTotal\WpfTotalnik\obj\Debug\WpfTotalnik.csprojAssemblyReference.cache
+D:\c#\WpfTotal\WpfTotalnik\obj\Debug\MainWindow.g.cs
+D:\c#\WpfTotal\WpfTotalnik\obj\Debug\App.g.cs
+D:\c#\WpfTotal\WpfTotalnik\obj\Debug\WpfTotalnik_MarkupCompile.cache
+D:\c#\WpfTotal\WpfTotalnik\obj\Debug\WpfTotalnik_MarkupCompile.lref
+D:\c#\WpfTotal\WpfTotalnik\obj\Debug\MainWindow.baml
+D:\c#\WpfTotal\WpfTotalnik\obj\Debug\WpfTotalnik.g.resources
+D:\c#\WpfTotal\WpfTotalnik\obj\Debug\WpfTotalnik.Properties.Resources.resources
+D:\c#\WpfTotal\WpfTotalnik\obj\Debug\WpfTotalnik.csproj.GenerateResource.cache
+D:\c#\WpfTotal\WpfTotalnik\obj\Debug\WpfTotalnik.exe
+D:\c#\WpfTotal\WpfTotalnik\obj\Debug\WpfTotalnik.pdb
+d:\с#\ 27 12 2020\WpfTotalnik\bin\Debug\WpfTotalnik.exe.config
+d:\с#\ 27 12 2020\WpfTotalnik\bin\Debug\WpfTotalnik.exe
+d:\с#\ 27 12 2020\WpfTotalnik\bin\Debug\WpfTotalnik.pdb
+d:\с#\ 27 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.csprojAssemblyReference.cache
+d:\с#\ 27 12 2020\WpfTotalnik\obj\Debug\MainWindow.g.cs
+d:\с#\ 27 12 2020\WpfTotalnik\obj\Debug\App.g.cs
+d:\с#\ 27 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik_MarkupCompile.cache
+d:\с#\ 27 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik_MarkupCompile.lref
+d:\с#\ 27 12 2020\WpfTotalnik\obj\Debug\MainWindow.baml
+d:\с#\ 27 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.g.resources
+d:\с#\ 27 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.Properties.Resources.resources
+d:\с#\ 27 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.csproj.GenerateResource.cache
+d:\с#\ 27 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.exe
+d:\с#\ 27 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.pdb
+d:\с#\ 27 12 2020\WpfTotalnik\obj\Debug\FoldersCompareWindow.g.cs
+d:\с#\ 27 12 2020\WpfTotalnik\obj\Debug\FoldersCompareWindow.baml
+d:\c#\WpfTotalnik\bin\Debug\WpfTotalnik.exe.config
+d:\c#\WpfTotalnik\bin\Debug\WpfTotalnik.exe
+d:\c#\WpfTotalnik\bin\Debug\WpfTotalnik.pdb
+d:\c#\WpfTotalnik\obj\Debug\WpfTotalnik.csprojAssemblyReference.cache
+d:\c#\WpfTotalnik\obj\Debug\FoldersCompareWindow.g.cs
+d:\c#\WpfTotalnik\obj\Debug\MainWindow.g.cs
+d:\c#\WpfTotalnik\obj\Debug\App.g.cs
+d:\c#\WpfTotalnik\obj\Debug\WpfTotalnik_MarkupCompile.cache
+d:\c#\WpfTotalnik\obj\Debug\WpfTotalnik_MarkupCompile.lref
+d:\c#\WpfTotalnik\obj\Debug\FoldersCompareWindow.baml
+d:\c#\WpfTotalnik\obj\Debug\MainWindow.baml
+d:\c#\WpfTotalnik\obj\Debug\WpfTotalnik.g.resources
+d:\c#\WpfTotalnik\obj\Debug\WpfTotalnik.Properties.Resources.resources
+d:\c#\WpfTotalnik\obj\Debug\WpfTotalnik.csproj.GenerateResource.cache
+d:\c#\WpfTotalnik\obj\Debug\WpfTotalnik.exe
+d:\c#\WpfTotalnik\obj\Debug\WpfTotalnik.pdb
+d:\с#\28 12 2020\WpfTotalnik\bin\Debug\WpfTotalnik.exe.config
+d:\с#\28 12 2020\WpfTotalnik\bin\Debug\WpfTotalnik.exe
+d:\с#\28 12 2020\WpfTotalnik\bin\Debug\WpfTotalnik.pdb
+d:\с#\28 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.csprojAssemblyReference.cache
+d:\с#\28 12 2020\WpfTotalnik\obj\Debug\FoldersCompareWindow.g.cs
+d:\с#\28 12 2020\WpfTotalnik\obj\Debug\MainWindow.g.cs
+d:\с#\28 12 2020\WpfTotalnik\obj\Debug\App.g.cs
+d:\с#\28 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik_MarkupCompile.cache
+d:\с#\28 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik_MarkupCompile.lref
+d:\с#\28 12 2020\WpfTotalnik\obj\Debug\FoldersCompareWindow.baml
+d:\с#\28 12 2020\WpfTotalnik\obj\Debug\MainWindow.baml
+d:\с#\28 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.g.resources
+d:\с#\28 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.Properties.Resources.resources
+d:\с#\28 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.csproj.GenerateResource.cache
+d:\с#\28 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.exe
+d:\с#\28 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.pdb
+d:\c#\28 12 2020\WpfTotalnik\bin\Debug\WpfTotalnik.exe.config
+d:\c#\28 12 2020\WpfTotalnik\bin\Debug\WpfTotalnik.exe
+d:\c#\28 12 2020\WpfTotalnik\bin\Debug\WpfTotalnik.pdb
+d:\c#\28 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.csprojAssemblyReference.cache
+d:\c#\28 12 2020\WpfTotalnik\obj\Debug\FoldersCompareWindow.g.cs
+d:\c#\28 12 2020\WpfTotalnik\obj\Debug\MainWindow.g.cs
+d:\c#\28 12 2020\WpfTotalnik\obj\Debug\App.g.cs
+d:\c#\28 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik_MarkupCompile.cache
+d:\c#\28 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik_MarkupCompile.lref
+d:\c#\28 12 2020\WpfTotalnik\obj\Debug\FoldersCompareWindow.baml
+d:\c#\28 12 2020\WpfTotalnik\obj\Debug\MainWindow.baml
+d:\c#\28 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.g.resources
+d:\c#\28 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.Properties.Resources.resources
+d:\c#\28 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.csproj.GenerateResource.cache
+d:\c#\28 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.exe
+d:\c#\28 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.pdb
+d:\с#\29 12 2020\WpfTotalnik\bin\Debug\WpfTotalnik.exe.config
+d:\с#\29 12 2020\WpfTotalnik\bin\Debug\WpfTotalnik.exe
+d:\с#\29 12 2020\WpfTotalnik\bin\Debug\WpfTotalnik.pdb
+d:\с#\29 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.csprojAssemblyReference.cache
+d:\с#\29 12 2020\WpfTotalnik\obj\Debug\FoldersCompareWindow.g.cs
+d:\с#\29 12 2020\WpfTotalnik\obj\Debug\MainWindow.g.cs
+d:\с#\29 12 2020\WpfTotalnik\obj\Debug\App.g.cs
+d:\с#\29 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik_MarkupCompile.cache
+d:\с#\29 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik_MarkupCompile.lref
+d:\с#\29 12 2020\WpfTotalnik\obj\Debug\FoldersCompareWindow.baml
+d:\с#\29 12 2020\WpfTotalnik\obj\Debug\MainWindow.baml
+d:\с#\29 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.g.resources
+d:\с#\29 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.Properties.Resources.resources
+d:\с#\29 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.csproj.GenerateResource.cache
+d:\с#\29 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.exe
+d:\с#\29 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.pdb
+d:\c#\30 12 2020\WpfTotalnik\bin\Debug\WpfTotalnik.exe.config
+d:\c#\30 12 2020\WpfTotalnik\bin\Debug\WpfTotalnik.exe
+d:\c#\30 12 2020\WpfTotalnik\bin\Debug\WpfTotalnik.pdb
+d:\c#\30 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.csprojAssemblyReference.cache
+d:\c#\30 12 2020\WpfTotalnik\obj\Debug\FoldersCompareWindow.g.cs
+d:\c#\30 12 2020\WpfTotalnik\obj\Debug\MainWindow.g.cs
+d:\c#\30 12 2020\WpfTotalnik\obj\Debug\App.g.cs
+d:\c#\30 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik_MarkupCompile.cache
+d:\c#\30 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik_MarkupCompile.lref
+d:\c#\30 12 2020\WpfTotalnik\obj\Debug\FoldersCompareWindow.baml
+d:\c#\30 12 2020\WpfTotalnik\obj\Debug\MainWindow.baml
+d:\c#\30 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.g.resources
+d:\c#\30 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.Properties.Resources.resources
+d:\c#\30 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.csproj.GenerateResource.cache
+d:\c#\30 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.exe
+d:\c#\30 12 2020\WpfTotalnik\obj\Debug\WpfTotalnik.pdb
+d:\c#\30 12 2020\WpfTotalnik\obj\Debug\ModalQuestion.g.cs
+d:\c#\30 12 2020\WpfTotalnik\obj\Debug\ModalQuestion.baml
+D:\c#\02 01 2021\WpfTotalnik\bin\Debug\WpfTotalnik.exe.config
+D:\c#\02 01 2021\WpfTotalnik\bin\Debug\WpfTotalnik.exe
+D:\c#\02 01 2021\WpfTotalnik\bin\Debug\WpfTotalnik.pdb
+D:\c#\02 01 2021\WpfTotalnik\obj\Debug\WpfTotalnik.csprojAssemblyReference.cache
+D:\c#\02 01 2021\WpfTotalnik\obj\Debug\FoldersCompareWindow.g.cs
+D:\c#\02 01 2021\WpfTotalnik\obj\Debug\MainWindow.g.cs
+D:\c#\02 01 2021\WpfTotalnik\obj\Debug\ModalQuestion.g.cs
+D:\c#\02 01 2021\WpfTotalnik\obj\Debug\App.g.cs
+D:\c#\02 01 2021\WpfTotalnik\obj\Debug\WpfTotalnik_MarkupCompile.cache
+D:\c#\02 01 2021\WpfTotalnik\obj\Debug\WpfTotalnik_MarkupCompile.lref
+D:\c#\02 01 2021\WpfTotalnik\obj\Debug\FoldersCompareWindow.baml
+D:\c#\02 01 2021\WpfTotalnik\obj\Debug\MainWindow.baml
+D:\c#\02 01 2021\WpfTotalnik\obj\Debug\ModalQuestion.baml
+D:\c#\02 01 2021\WpfTotalnik\obj\Debug\WpfTotalnik.g.resources
+D:\c#\02 01 2021\WpfTotalnik\obj\Debug\WpfTotalnik.Properties.Resources.resources
+D:\c#\02 01 2021\WpfTotalnik\obj\Debug\WpfTotalnik.csproj.GenerateResource.cache
+D:\c#\02 01 2021\WpfTotalnik\obj\Debug\WpfTotalnik.exe
+D:\c#\02 01 2021\WpfTotalnik\obj\Debug\WpfTotalnik.pdb

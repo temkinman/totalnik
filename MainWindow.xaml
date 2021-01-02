@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfTotalnik.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
+        xmlns:local="clr-namespace:WpfTotalnik"
+        mc:Ignorable="d"
+        Title="Totalnik" Height="507.333" Width="1200" WindowStartupLocation="CenterScreen" Icon="Totalcmd.jpg" Loaded="Window_Loaded" ResizeMode="CanMinimize">
+    <Grid Margin="0,0,4,383">
+        <Menu IsMainMenu="True" HorizontalAlignment="Left" Height="22" Margin="10,5,0,0" VerticalAlignment="Top" Width="54" FontSize="14" Background="White">
+            <MenuItem Header="_Файл" Width="54">
+                <MenuItem Header="Сравнить каталоги" Click="CompareFolders"/>
+                <Separator />
+                <MenuItem Header="Выход" Click="MenuItem_Click_2"/>
+            </MenuItem>
+        </Menu>
+        <TextBox x:Name="textBoxLeft" HorizontalAlignment="Left" Height="20" Margin="7,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="570" FontSize="12" Background="#FF93B2D6" Padding="1"/>
+        <TextBox x:Name="textBoxRight" HorizontalAlignment="Left" Height="20" Margin="604,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="570" FontSize="12" Background="#FF93B2D6" IsReadOnly="True"/>
+        <Grid HorizontalAlignment="Left" Height="350" Margin="6,92,0,-355" VerticalAlignment="Top" Width="981">
+            <ListView x:Name="leftListFiles" HorizontalAlignment="Left" Width="575" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="0,0,0,10" MouseDoubleClick="leftListFiles_MouseDoubleClick" KeyDown="leftListFiles_KeyDown">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.View>
+                    <GridView>
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ListView HorizontalAlignment="Left" Height="340" Margin="598,0,-190,0" VerticalAlignment="Top" Width="570" x:Name="rightListFiles" ScrollViewer.HorizontalScrollBarVisibility="Disabled" MouseDoubleClick="rightListFiles_MouseDoubleClick" KeyDown="rightListFiles_KeyDown">
+                <GridView>
+                </GridView>
+            </ListView>
+        </Grid>
+        <ToolBarPanel x:Name="leftDrives" HorizontalAlignment="Left" Height="24" Margin="10,32,0,0" VerticalAlignment="Top" Width="577" Orientation="Horizontal"/>
+        <ToolBarPanel x:Name="rightDrives" HorizontalAlignment="Left" Height="24" Margin="603,32,0,0" VerticalAlignment="Top" Width="577" Orientation="Horizontal"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,69 @@
+﻿<Window x:Name="FoldersCompareWindow" x:Class="WpfTotalnik.FoldersCompare"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTotalnik"
+        mc:Ignorable="d"
+        Title="Folders comparing" Height="507.333" Width="1000" WindowStartupLocation="CenterScreen" Icon="Totalcmd.jpg" ResizeMode="CanMinimize" Loaded="FoldersCompareWindow_Loaded">
+    <Grid>
+        <Menu IsMainMenu="True" HorizontalAlignment="Left" Height="22" Margin="10,5,0,0" VerticalAlignment="Top" Width="54" FontSize="14" Background="White">
+            <MenuItem Header="_Файл" Width="54">
+                <MenuItem Header="Синхронизировать каталоги"/>
+                <MenuItem x:Name="CopyMenuBtn" Header="Копировать файл" Click="CopyMenuBtn_Click"/>
+                <MenuItem x:Name="CompareMenuBtn" Header="Сравнить" Click="CompareMenuBtn_Click"/>
+                <Separator />
+                <MenuItem Header="Выход" Click="CloseFoldersComparing"/>
+            </MenuItem>
+        </Menu>
+        <Grid HorizontalAlignment="Left" Height="425" Margin="5,32,0,0" VerticalAlignment="Top" Width="979">
+            <ToolBarPanel x:Name="leftDrives" HorizontalAlignment="Left" Height="83" Margin="0,0,0,0" VerticalAlignment="Top" Width="979" Orientation="Horizontal">
+                <Button Content="сравнить" Height="30" VerticalAlignment="Center" Width="86" FontWeight="Bold" Margin="10,0,0,0" Click="Button_Click"/>
+                <CheckBox x:Name="cmpContent" Content="по содержимому" Height="20"  Width="150" Margin="30,0,10,31"/>
+                <CheckBox x:Name="withSubDir" Content="с подкаталогами" Height="20"  Width="150" Margin="-160,20,10,0" Checked="withSubDir_Checked" Unchecked="withSubDir_Unchecked"/>
+                <Button x:Name="SyncBtn" Content="синхронизировать" Height="30" Margin="10,12,0,41" VerticalAlignment="Center" Width="130" FontWeight="Bold" IsEnabled="False" Click="SyncBtn_Click" />
+                <Button x:Name="CopyBtn" Content="копировать файл" Height="30" Margin="-130,45,0,8"  Width="130" Click="CopyBtn_Click" FontWeight="Bold" IsEnabled="False"/>
+            </ToolBarPanel>
+            <TextBox x:Name="folderPathLeft" HorizontalAlignment="Left" Height="20" Margin="5,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="480" FontSize="12" Background="#FF93B2D6" Padding="1" IsReadOnly="True"/>
+            <TextBox x:Name="folderPathRight" HorizontalAlignment="Left" Height="20" Margin="500,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="469" FontSize="12" Background="#FF93B2D6" IsReadOnly="True"/>
+            <ListView x:Name="foldersCmpList" HorizontalAlignment="Left" Width="964" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="5,125,0,0" ItemsSource="{Binding ListCmpFilesCollections}" MouseDoubleClick="foldersCmpList_MouseDoubleClick" SelectionChanged="foldersCmpList_SelectionChanged">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListViewItem}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=сmpIcon}" Value="{x:Null}">
+                                <Setter Property="Background" Value="LightGray"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn x:Name="GVColumnFirstName" Header="Name"  Width="240" DisplayMemberBinding="{Binding firstName}">
+                        </GridViewColumn>
+                        <GridViewColumn x:Name="GVColumnFirstSize" Header="Size"  Width="80" DisplayMemberBinding="{Binding firstSize}">
+                        </GridViewColumn>
+                        <GridViewColumn x:Name="GVColumnFirstDate" Header="Date"  Width="130" DisplayMemberBinding="{Binding firstDate}">
+                        </GridViewColumn>
+                        <GridViewColumn x:Name="GVColumnImage" Header="Equality"  Width="60">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image x:Name="cmpIcon" Source="{Binding сmpIcon}" Height="20"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn x:Name="GVColumnSecondDate" Header="Date"  Width="130" DisplayMemberBinding="{Binding secondDate}">
+                        </GridViewColumn>
+                        <GridViewColumn x:Name="GVColumnSecondSize" Header="Size"  Width="80" DisplayMemberBinding="{Binding secondSize}">
+                        </GridViewColumn>
+                        <GridViewColumn x:Name="GVColumnSecondName" Header="Name"  Width="240" DisplayMemberBinding="{Binding secondName}">
+                        </GridViewColumn>
+                        <GridViewColumn x:Name="GVStatus" Header="status" Width="0" DisplayMemberBinding="{Binding status}"/>
+                        <GridViewColumn x:Name="GVParentFolder" Header="status" Width="0" DisplayMemberBinding="{Binding parentDir}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+    </Grid>
+</Window>
