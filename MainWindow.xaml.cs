@@ -32,7 +32,6 @@ namespace WpfTotalnik
             InitializeComponent();
         }
 
-
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
         {
             this.Close();

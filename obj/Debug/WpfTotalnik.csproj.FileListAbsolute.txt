@@ -128,3 +128,21 @@ D:\c#\02 01 2021\WpfTotalnik\obj\Debug\WpfTotalnik.Properties.Resources.resource
 D:\c#\02 01 2021\WpfTotalnik\obj\Debug\WpfTotalnik.csproj.GenerateResource.cache
 D:\c#\02 01 2021\WpfTotalnik\obj\Debug\WpfTotalnik.exe
 D:\c#\02 01 2021\WpfTotalnik\obj\Debug\WpfTotalnik.pdb
+E:\c#\MyTotal\totalnik\bin\Debug\WpfTotalnik.exe.config
+E:\c#\MyTotal\totalnik\bin\Debug\WpfTotalnik.exe
+E:\c#\MyTotal\totalnik\bin\Debug\WpfTotalnik.pdb
+E:\c#\MyTotal\totalnik\obj\Debug\WpfTotalnik.csprojAssemblyReference.cache
+E:\c#\MyTotal\totalnik\obj\Debug\FoldersCompareWindow.g.cs
+E:\c#\MyTotal\totalnik\obj\Debug\MainWindow.g.cs
+E:\c#\MyTotal\totalnik\obj\Debug\ModalQuestion.g.cs
+E:\c#\MyTotal\totalnik\obj\Debug\App.g.cs
+E:\c#\MyTotal\totalnik\obj\Debug\WpfTotalnik_MarkupCompile.cache
+E:\c#\MyTotal\totalnik\obj\Debug\WpfTotalnik_MarkupCompile.lref
+E:\c#\MyTotal\totalnik\obj\Debug\FoldersCompareWindow.baml
+E:\c#\MyTotal\totalnik\obj\Debug\MainWindow.baml
+E:\c#\MyTotal\totalnik\obj\Debug\ModalQuestion.baml
+E:\c#\MyTotal\totalnik\obj\Debug\WpfTotalnik.g.resources
+E:\c#\MyTotal\totalnik\obj\Debug\WpfTotalnik.Properties.Resources.resources
+E:\c#\MyTotal\totalnik\obj\Debug\WpfTotalnik.csproj.GenerateResource.cache
+E:\c#\MyTotal\totalnik\obj\Debug\WpfTotalnik.exe
+E:\c#\MyTotal\totalnik\obj\Debug\WpfTotalnik.pdb

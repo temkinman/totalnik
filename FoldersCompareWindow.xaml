@@ -59,8 +59,7 @@
                         </GridViewColumn>
                         <GridViewColumn x:Name="GVColumnSecondName" Header="Name"  Width="240" DisplayMemberBinding="{Binding secondName}">
                         </GridViewColumn>
-                        <GridViewColumn x:Name="GVStatus" Header="status" Width="0" DisplayMemberBinding="{Binding status}"/>
-                        <GridViewColumn x:Name="GVParentFolder" Header="status" Width="0" DisplayMemberBinding="{Binding parentDir}"/>
+                        
                     </GridView>
                 </ListView.View>
             </ListView>

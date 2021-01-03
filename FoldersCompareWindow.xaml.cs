@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Windows.Media;
 
 namespace WpfTotalnik
 {
@@ -65,6 +67,21 @@ namespace WpfTotalnik
             ListCmpFilesCollections.Clear();
         }
 
+        private string BuiltPathToCopy(FileInfo file, string side)
+        {
+            string pathTmp;
+            if (side == LEFT)
+            {
+                pathTmp = (rightPath + file.FullName.Substring(leftPath.Length));
+            }
+            else
+            {
+                pathTmp = (leftPath + file.FullName.Substring(rightPath.Length));
+            }
+
+            return pathTmp;//.Substring(0, pathTmp.Length - file.Name.Length); ;
+        }
+
         private void CompareFilesInFolder(string leftPath, string rightPath)
         {
             
@@ -101,7 +118,7 @@ namespace WpfTotalnik
                 else
                 {
                     imgPath = LEFT_ARROW_IMG;
-                    pathToCopy = rightPath;
+                    pathToCopy = BuiltPathToCopy(file , LEFT);
 
                     ListCmpFilesCollections.Add(cpmItem.createCmpItem(file, null, imgPath, NOT_EXIST_RIGHT_SIDE, leftPath, pathToCopy));
                     filesToRightPathCopy.Add(file);
@@ -111,7 +128,7 @@ namespace WpfTotalnik
             foreach (FileInfo secondFile in rightFiles)
             {
                 imgPath = RIGHT_ARROW_IMG;
-                pathToCopy = leftPath;
+                pathToCopy = BuiltPathToCopy(secondFile, RIGHT); 
                 ListCmpFilesCollections.Add(cpmItem.createCmpItem(null, secondFile, imgPath, NOT_EXIST_LEFT_SIDE, rightPath, pathToCopy));
                 filesToLeftPathCopy.Add(secondFile);
             }
@@ -158,7 +175,6 @@ namespace WpfTotalnik
                 }
 
                 FolderCmpItem cpmItem = new FolderCmpItem();
-                //foldersCmpList
                 
                 ListCmpFilesCollections.Add(cpmItem.createCmpItem(currentDirLeft));
 
@@ -194,33 +210,26 @@ namespace WpfTotalnik
                     rightNames.Add(folderName);
                 }
 
-
                 IEnumerable<string> theSameFolders = leftNames.Where(file => rightNames.Contains(file));
-
                 foreach (string dir in theSameFolders)
                 {
                     dirsLeft.Add(currentDirLeft + "\\" + dir);
                     dirsRight.Add(currentDirRight + "\\" + dir);
                 }
 
-
                 IEnumerable<string> firstDiffSecond = leftNames.Where(file => !rightNames.Contains(file));
-
                 foreach (string dir in firstDiffSecond)
                 {
                     string path = currentDirLeft + "\\" + dir;
                     RenderFilesWithDeep(path, LEFT);
-                    //printFilesWithDeep(path, "left");
                 }
 
 
                 IEnumerable<string> secondDiffFirst = rightNames.Where(file => !leftNames.Contains(file));
-
                 foreach (string dir in secondDiffFirst)
                 {
                     string path = currentDirRight + "\\" + dir;
                     RenderFilesWithDeep(path, RIGHT);
-                    //printFilesWithDeep(currentDirRight + "\\" + dir, "right");
                 }
             }
         }
@@ -266,17 +275,17 @@ namespace WpfTotalnik
                     if (side == LEFT)
                     {
                         imgPath = LEFT_ARROW_IMG;
-                        ListCmpFilesCollections.Add(cpmItem.createCmpItem(file, null, imgPath, NOT_EXIST_RIGHT_SIDE, path, "copy to Left Side"));
+                        string pathToCopy = BuiltPathToCopy(file, LEFT);
+                        ListCmpFilesCollections.Add(cpmItem.createCmpItem(file, null, imgPath, NOT_EXIST_RIGHT_SIDE, path, pathToCopy));
                         filesToRightPathCopy.Add(file);
-                        //Console.WriteLine("file: \"{0}\" !== \"*************\"", file.FullName);
                     }
+
                     if (side == RIGHT)
                     {
                         imgPath = RIGHT_ARROW_IMG;
-                        //pathToCopy = leftPath;
-                        ListCmpFilesCollections.Add(cpmItem.createCmpItem(null, file, imgPath, NOT_EXIST_LEFT_SIDE, path, "copy to Right Side"));
+                        string pathToCopy = BuiltPathToCopy(file, RIGHT);
+                        ListCmpFilesCollections.Add(cpmItem.createCmpItem(null, file, imgPath, NOT_EXIST_LEFT_SIDE, path, pathToCopy));
                         filesToLeftPathCopy.Add(file);
-                        //Console.WriteLine("file: \"*************\" !== \"{0}\"", file.FullName);
                     }
                 }
 
@@ -291,7 +300,7 @@ namespace WpfTotalnik
         private void foldersCmpList_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             FolderCmpItem itemSelected = (FolderCmpItem) foldersCmpList.SelectedItem;
-            Console.WriteLine("Status: {0}, parentDir: {1}", itemSelected.status, itemSelected.parentDir);
+            Console.WriteLine("Status: {0}, parentDir: {1}, pathToCopy: {2}", itemSelected.status, itemSelected.parentDir, itemSelected.pathWhereNeedCopy);
         }
 
         private void CopyOneFile(FolderCmpItem itemSelected)
@@ -307,7 +316,7 @@ namespace WpfTotalnik
                 if (File.Exists(itemSelected.secondName))
                 {
                     sourceFile = itemSelected.secondName != null ? itemSelected.secondName : null;
-                    targetDir = leftPath;
+                    targetDir = itemSelected.pathWhereNeedCopy;
                 }
             }
 
@@ -316,7 +325,7 @@ namespace WpfTotalnik
                 if (File.Exists(itemSelected.firstName))
                 {
                     sourceFile = itemSelected.firstName != null ? itemSelected.firstName : null ;
-                    targetDir = rightPath;
+                    targetDir = itemSelected.pathWhereNeedCopy;
                 }
             }
 
@@ -383,6 +392,25 @@ namespace WpfTotalnik
             CopyBtn_Click(sender, e);
         }
 
+        
+        private void copyFile(string filePath, string destDirPath)
+        {
+            try
+            {
+                if (!Directory.Exists(destDirPath))
+                {
+                    DirectoryInfo di = Directory.CreateDirectory(destDirPath);
+                    di.Delete();
+                }
+                
+                File.Copy(filePath, destDirPath, true);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("The process failed: {0}", e.ToString());
+            }
+        }
+
         private void SyncBtn_Click(object sender, RoutedEventArgs e)
         {
             string destFile;
@@ -391,38 +419,19 @@ namespace WpfTotalnik
 
             if (result == MessageBoxResult.Yes)
             {
-                if (Directory.Exists(rightPath))
+                foreach (FolderCmpItem item in ListCmpFilesCollections)
                 {
-                    foreach (FileInfo file in filesToRightPathCopy)
+                    if(item.status != EQUALLY && item.status.Length != 0)
                     {
-                        destFile = Path.Combine(rightPath, file.Name);
-                        File.Copy(file.FullName, destFile, true);
+                        string filePath = item.firstName.Length > 0 ? item.firstName : item.secondName;
+                        string destDirPath = item.pathWhereNeedCopy;
+                        copyFile(filePath, destDirPath);
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Source path \"" + rightPath + "\" does not exist!", "Copying files", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-                
             }
             
-            result = MessageBox.Show("Справа налево копируется \"" + filesToLeftPathCopy.Count + "\" файла", "Копирование файлов", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            //result = MessageBox.Show("Справа налево копируется \"" + filesToLeftPathCopy.Count + "\" файла", "Копирование файлов", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
-            if (result == MessageBoxResult.Yes)
-            {
-                if(Directory.Exists(leftPath))
-                {
-                    foreach (FileInfo file in filesToLeftPathCopy)
-                    {
-                        destFile = Path.Combine(leftPath, file.Name);
-                        File.Copy(file.FullName, destFile, true);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Source path \"" + rightPath + "\" does not exist!", "Copying files", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-            }
             clearListFilesView();
             CompareFilesInFolder(leftPath, rightPath);
         }
