@@ -137,7 +137,8 @@ namespace WpfTotalnik
                         {
                             imgPath = NOT_EQUAL_IMG;
                             pathToCopy = BuiltPathToCopy(file, LEFT);
-                            ListCmpFilesCollections.Add(cpmItem.createCmpItem(file, secondFile, imgPath, NOT_EQUAL_COPY_TO_LEFT, rightPath, pathToCopy));
+                            string redItem = "red";
+                            ListCmpFilesCollections.Add(cpmItem.createCmpItem(file, secondFile, imgPath, NOT_EQUAL_COPY_TO_LEFT, rightPath, pathToCopy, redItem));
                         }
                         else
                         {

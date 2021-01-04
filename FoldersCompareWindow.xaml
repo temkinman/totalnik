@@ -35,8 +35,8 @@
                             <DataTrigger Binding="{Binding Path=сmpIcon}" Value="{x:Null}">
                                 <Setter Property="Background" Value="LightGray"/>
                             </DataTrigger>
-                            <DataTrigger Binding="{Binding Path=status}" Value="NOT_EQUAL_COPY_TO_LEFT">
-                                <Setter Property="Foreground" Value="Red"/>
+                            <DataTrigger Binding="{Binding Path=color}" Value="red">
+                                <Setter Property="Foreground" Value="{Binding color}"/>
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>

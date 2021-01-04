@@ -17,8 +17,9 @@ namespace WpfTotalnik
         public string status { get; set; }
         public string parentDir { get; set; }
         public string pathWhereNeedCopy { get; set; }
+        public string color { get; set; }
 
-        public FolderCmpItem createCmpItem(FileInfo file, FileInfo secondFile, string imagePath, string statusCmp, string parentDir, string pathWhereNeedCopy = null)
+        public FolderCmpItem createCmpItem(FileInfo file, FileInfo secondFile, string imagePath, string statusCmp, string parentDir, string pathWhereNeedCopy = null, string color = null)
         {
             return new FolderCmpItem()
             {
@@ -32,6 +33,7 @@ namespace WpfTotalnik
                 status = statusCmp,
                 parentDir = parentDir,
                 pathWhereNeedCopy = pathWhereNeedCopy,
+                color = color
             };
         }
 
