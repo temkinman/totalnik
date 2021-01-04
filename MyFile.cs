@@ -48,7 +48,8 @@ namespace WpfTotalnik
 
         public static string GetFileDate(FileInfo file)
         {
-            return file.LastAccessTime.ToShortDateString() + " " + file.LastAccessTime.ToShortTimeString();
+            return file.LastWriteTime.ToString();
+            //return file.LastAccessTime.ToShortDateString() + " " + file.LastAccessTime.ToShortTimeString();
         }
 
         public static void CopyFile(FileInfo file, string path)
