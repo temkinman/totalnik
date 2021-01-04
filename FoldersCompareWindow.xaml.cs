@@ -363,22 +363,6 @@ namespace WpfTotalnik
 
             if (showQuestionModal(filePath, destDirPath))
             {
-                /*if(item.status == NOT_EQUAL_COPY_TO_RIGHT || item.status == NOT_EQUAL_COPY_TO_LEFT)
-                {
-                    try
-                    {
-                        File.Replace(filePath, destDirPath, "backup");
-                    }
-                    catch(Exception error)
-                    {
-                        Console.WriteLine(error);
-                    }
-                    
-                }
-                else
-                {
-                    
-                }*/
                 copyFile(filePath, destDirPath);
             }
             updateListview();
