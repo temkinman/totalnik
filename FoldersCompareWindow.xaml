@@ -35,6 +35,9 @@
                             <DataTrigger Binding="{Binding Path=сmpIcon}" Value="{x:Null}">
                                 <Setter Property="Background" Value="LightGray"/>
                             </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=status}" Value="NOT_EQUAL_COPY_TO_LEFT">
+                                <Setter Property="Foreground" Value="Red"/>
+                            </DataTrigger>
                         </Style.Triggers>
                     </Style>
                 </ListView.ItemContainerStyle>
