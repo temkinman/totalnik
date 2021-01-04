@@ -67,6 +67,20 @@ namespace WpfTotalnik
             ListCmpFilesCollections.Clear();
         }
 
+        private void updateListview()
+        {
+            clearListFilesView();
+
+            if (cpmSubDir == true)
+            {
+                CompareFilesWithSubDirs(leftPath, rightPath);
+            }
+            else
+            {
+                CompareFilesInFolder(leftPath, rightPath);
+            }
+        }
+
         private string BuiltPathToCopy(FileInfo file, string side)
         {
             string pathTmp;
@@ -236,15 +250,8 @@ namespace WpfTotalnik
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            clearListFilesView();
-            if (cpmSubDir == true)
-            {
-                CompareFilesWithSubDirs(leftPath, rightPath);
-            }
-            else
-            {
-                CompareFilesInFolder(leftPath, rightPath);
-            }
+            updateListview();
+            
         }
 
         public void RenderFilesWithDeep(string path, string side)
@@ -303,70 +310,29 @@ namespace WpfTotalnik
             Console.WriteLine("Status: {0}, parentDir: {1}, pathToCopy: {2}", itemSelected.status, itemSelected.parentDir, itemSelected.pathWhereNeedCopy);
         }
 
-        private void CopyOneFile(FolderCmpItem itemSelected)
+        private bool showQuestionModal(string filePath, string destDirPath)
         {
-            string sourceFile = "";
-            string targetDir = "";
-            string fileName;
-            string destFile;
-            string status = itemSelected.status;
-
-            if (status == NOT_EXIST_LEFT_SIDE)
-            {
-                if (File.Exists(itemSelected.secondName))
-                {
-                    sourceFile = itemSelected.secondName != null ? itemSelected.secondName : null;
-                    targetDir = itemSelected.pathWhereNeedCopy;
-                }
-            }
-
-            if (status == NOT_EXIST_RIGHT_SIDE)
-            {
-                if (File.Exists(itemSelected.firstName))
-                {
-                    sourceFile = itemSelected.firstName != null ? itemSelected.firstName : null ;
-                    targetDir = itemSelected.pathWhereNeedCopy;
-                }
-            }
-
-            fileName = Path.GetFileName(sourceFile);
-            destFile = Path.Combine(targetDir, fileName);
-            QuestionModal modal = new QuestionModal(fileName, targetDir);
-
+            QuestionModal modal = new QuestionModal(filePath, destDirPath);
+           
             bool? result = modal.ShowDialog();
 
-            if (result.HasValue && result.Value && sourceFile != null && targetDir != null)
-            {
-                try
-                {
-                    File.Copy(sourceFile, destFile, true);
-                    Console.WriteLine("File copied");
-                }
-                catch(Exception error)
-                {
-                    Console.WriteLine("Error: ", error.ToString());
-                }
-            }
-            CompareFilesInFolder(leftPath, rightPath);
+            return (result.HasValue && result.Value && filePath != null && destDirPath != null);
         }
 
         private void CopyBtn_Click(object sender, RoutedEventArgs e)
         {
-            FolderCmpItem itemSelected = (FolderCmpItem)foldersCmpList.SelectedItem;
+            FolderCmpItem item = (FolderCmpItem)foldersCmpList.SelectedItem;
 
-            CopyOneFile(itemSelected);
-
-            Console.WriteLine("Status: {0}", itemSelected.status);
-            if(itemSelected.firstName != null)
+            if (item.status != EQUALLY && item.status.Length != 0)
             {
-                Console.WriteLine("itemSelected.firstName: {0}", itemSelected.firstName);
+                string filePath = item.firstName.Length > 0 ? item.firstName : item.secondName;
+                string destDirPath = item.pathWhereNeedCopy;
+                if(showQuestionModal(filePath, destDirPath))
+                {
+                    copyFile(filePath, destDirPath);
+                }
             }
-
-            if (itemSelected.secondName != null)
-            {
-                Console.WriteLine("itemSelected.secondName: {0}", itemSelected.secondName);
-            }
-            
+            updateListview();
         }
 
         private void foldersCmpList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -429,11 +395,10 @@ namespace WpfTotalnik
                     }
                 }
             }
-            
+
             //result = MessageBox.Show("Справа налево копируется \"" + filesToLeftPathCopy.Count + "\" файла", "Копирование файлов", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
-            clearListFilesView();
-            CompareFilesInFolder(leftPath, rightPath);
+            updateListview();
         }
 
         private void withSubDir_Checked(object sender, RoutedEventArgs e)
