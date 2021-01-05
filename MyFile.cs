@@ -23,14 +23,14 @@ namespace WpfTotalnik
             return dirs;
         }
 
-        public static FileInfo[] GetFiles(string path)
+        public static FileInfo[] GetFiles(string path, string filter = "*.*")
         {
             DirectoryInfo DirInfo;
             FileInfo[] files = { };
             try
             {
                 DirInfo = new DirectoryInfo(path);
-                files = DirInfo.GetFiles("*.*");
+                files = DirInfo.GetFiles(filter);
             }
             catch (Exception error)
             {

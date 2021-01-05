@@ -71,6 +71,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Difference.xaml.cs">
+      <DependentUpon>Difference.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DifferenceFiles.xaml.cs">
+      <DependentUpon>DifferenceFiles.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MyFile.cs" />
     <Compile Include="FolderCmpItem.cs" />
     <Compile Include="FoldersCompareWindow.xaml.cs">
@@ -83,6 +89,14 @@
     <Compile Include="ModalQuestion.xaml.cs">
       <DependentUpon>ModalQuestion.xaml</DependentUpon>
     </Compile>
+    <Page Include="Difference.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DifferenceFiles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FoldersCompareWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

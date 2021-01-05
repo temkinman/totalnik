@@ -43,12 +43,6 @@ namespace WpfTotalnik
             this.leftPath = leftPath;
             this.rightPath = rightPath;
         }
-
-        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
         private void CloseFoldersComparing(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -99,16 +93,16 @@ namespace WpfTotalnik
 
         private void CompareFilesInFolder(string leftPath, string rightPath)
         {
-            
+            string filter = filterExtension.Text;
+
             filesToRightPathCopy.Clear();
             filesToLeftPathCopy.Clear();
 
-            leftFiles = MyFile.GetFiles(leftPath);
-            rightFiles = MyFile.GetFiles(rightPath);
+            leftFiles = MyFile.GetFiles(leftPath, filter);
+            rightFiles = MyFile.GetFiles(rightPath, filter);
             string imgPath;
             FolderCmpItem cpmItem = new FolderCmpItem();
             string pathToCopy;
-
 
             if (leftFiles.Length > 0 || rightFiles.Length > 0)
             {
@@ -277,8 +271,16 @@ namespace WpfTotalnik
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            FolderCmpItem itemSelected = (FolderCmpItem)foldersCmpList.SelectedItem;
+            if (cmpContent.IsChecked == true && itemSelected != null && itemSelected.status == EQUALLY)
+            {
+                if(itemSelected.firstName != null && itemSelected.secondName != null)
+                {
+                    Difference diff = new Difference(itemSelected.firstName, itemSelected.secondName);
+                    diff.ShowDialog();
+                }
+            }
             updateListview();
-            
         }
 
         public void RenderFilesWithDeep(string path, string side)
@@ -297,8 +299,9 @@ namespace WpfTotalnik
             {
                 string currentDir = dirs.Pop();
                 string[] subDir = Directory.GetDirectories(currentDir);
+                string filter = filterExtension.Text;
 
-                FileInfo[] files = MyFile.GetFiles(currentDir);
+                FileInfo[] files = MyFile.GetFiles(currentDir, filter);
 
                 ListCmpFilesCollections.Add(cpmItem.createCmpItem(currentDir));
                 foreach (FileInfo file in files)

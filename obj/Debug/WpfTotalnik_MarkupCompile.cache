@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\c#\02 01 2021\WpfTotalnik\obj\Debug\
+d:\c#\02 01 2021\WpfTotalnik\obj\Debug\
 WpfTotalnik
 none
 false
 DEBUG;TRACE
-D:\c#\02 01 2021\WpfTotalnik\App.xaml
-31097971372
+d:\c#\02 01 2021\WpfTotalnik\App.xaml
+5-933806748
 
-132066277971
+15984756627
 141183416626
-FoldersCompareWindow.xaml;MainWindow.xaml;ModalQuestion.xaml;
+Difference.xaml;DifferenceFiles.xaml;FoldersCompareWindow.xaml;MainWindow.xaml;ModalQuestion.xaml;
 
 False
 

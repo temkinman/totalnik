@@ -18,13 +18,13 @@
         </Menu>
         <Grid HorizontalAlignment="Left" Height="425" Margin="5,32,0,0" VerticalAlignment="Top" Width="979">
             <ToolBarPanel x:Name="leftDrives" HorizontalAlignment="Left" Height="83" Margin="0,0,0,0" VerticalAlignment="Top" Width="979" Orientation="Horizontal">
-                <Button Content="сравнить" Height="30" VerticalAlignment="Center" Width="86" FontWeight="Bold" Margin="10,0,0,0" Click="Button_Click"/>
+                <Button Content="сравнить" Height="30" VerticalAlignment="Center" Width="86" FontWeight="Bold" Margin="10,36,0,17" Click="Button_Click"/>
+                <ComboBox Name="filterExtension" Height="23" Text="*.*" VerticalAlignment="Top" Width="60" Margin="-85,5,0,0" RenderTransformOrigin="0.614,0.6" IsEditable="True"/>
                 <CheckBox x:Name="cmpContent" Content="по содержимому" Height="20"  Width="150" Margin="30,5,10,61"/>
                 <CheckBox x:Name="withSubDir" Content="с подкаталогами" Height="20"  Width="150" Margin="-160,56,10,7"/>
                 <CheckBox x:Name="byDate" Content="с учетом даты" Height="20"  Width="120" Margin="-200,32,0,31"/>
                 <Button x:Name="SyncBtn" Content="синхронизировать" Height="30" Margin="10,12,0,41" VerticalAlignment="Center" Width="130" FontWeight="Bold" IsEnabled="False" Click="SyncBtn_Click" />
                 <Button x:Name="CopyBtn" Content="копировать файл" Height="30" Margin="-130,45,0,8"  Width="130" Click="CopyBtn_Click" FontWeight="Bold" IsEnabled="False"/>
-                
             </ToolBarPanel>
             <TextBox x:Name="folderPathLeft" HorizontalAlignment="Left" Height="20" Margin="5,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="480" FontSize="12" Background="#FF93B2D6" Padding="1" IsReadOnly="True"/>
             <TextBox x:Name="folderPathRight" HorizontalAlignment="Left" Height="20" Margin="500,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="469" FontSize="12" Background="#FF93B2D6" IsReadOnly="True"/>
@@ -64,7 +64,6 @@
                         </GridViewColumn>
                         <GridViewColumn x:Name="GVColumnSecondName" Header="Name"  Width="240" DisplayMemberBinding="{Binding secondName}">
                         </GridViewColumn>
-                        
                     </GridView>
                 </ListView.View>
             </ListView>

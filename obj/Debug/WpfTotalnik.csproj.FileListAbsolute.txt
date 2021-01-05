@@ -146,3 +146,7 @@ E:\c#\MyTotal\totalnik\obj\Debug\WpfTotalnik.Properties.Resources.resources
 E:\c#\MyTotal\totalnik\obj\Debug\WpfTotalnik.csproj.GenerateResource.cache
 E:\c#\MyTotal\totalnik\obj\Debug\WpfTotalnik.exe
 E:\c#\MyTotal\totalnik\obj\Debug\WpfTotalnik.pdb
+d:\c#\02 01 2021\WpfTotalnik\obj\Debug\DifferenceFiles.g.cs
+d:\c#\02 01 2021\WpfTotalnik\obj\Debug\DifferenceFiles.baml
+d:\c#\02 01 2021\WpfTotalnik\obj\Debug\Difference.g.cs
+d:\c#\02 01 2021\WpfTotalnik\obj\Debug\Difference.baml
