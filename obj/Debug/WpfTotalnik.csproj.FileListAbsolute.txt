@@ -150,3 +150,7 @@ d:\c#\02 01 2021\WpfTotalnik\obj\Debug\DifferenceFiles.g.cs
 d:\c#\02 01 2021\WpfTotalnik\obj\Debug\DifferenceFiles.baml
 d:\c#\02 01 2021\WpfTotalnik\obj\Debug\Difference.g.cs
 d:\c#\02 01 2021\WpfTotalnik\obj\Debug\Difference.baml
+E:\c#\MyTotal\totalnik\obj\Debug\Difference.g.cs
+E:\c#\MyTotal\totalnik\obj\Debug\DifferenceFiles.g.cs
+E:\c#\MyTotal\totalnik\obj\Debug\Difference.baml
+E:\c#\MyTotal\totalnik\obj\Debug\DifferenceFiles.baml

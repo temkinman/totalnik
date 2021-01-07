@@ -16,10 +16,12 @@ namespace WpfTotalnik
         public string secondDate { get; set; }
         public string status { get; set; }
         public string parentDir { get; set; }
-        public string pathWhereNeedCopy { get; set; }
+        public string pathToCopy { get; set; }
         public string color { get; set; }
+        public bool isCheck { get; set; }
+        public string directory { get; set; }
 
-        public FolderCmpItem createCmpItem(FileInfo file, FileInfo secondFile, string imagePath, string statusCmp, string parentDir, string pathWhereNeedCopy = null, string color = null)
+        public FolderCmpItem createCmpItem(FileInfo file, FileInfo secondFile, string imagePath, string statusCmp, string parentDir, string pathToCopy = null, string color = null, bool isCheck = false)
         {
             return new FolderCmpItem()
             {
@@ -32,23 +34,26 @@ namespace WpfTotalnik
                 secondName = secondFile == null ? "" : secondFile.FullName,
                 status = statusCmp,
                 parentDir = parentDir,
-                pathWhereNeedCopy = pathWhereNeedCopy,
-                color = color
+                pathToCopy = pathToCopy,
+                color = color,
+                isCheck = isCheck
             };
         }
 
-        public FolderCmpItem createCmpItem(string dirName)
+        public FolderCmpItem createCmpItem(string leftDirName, string rightDirName, string imagePath, string directory, string pathToCopy)
         {
             return new FolderCmpItem()
             {
-                firstName = dirName,
+                firstName = leftDirName == "" ? "" : leftDirName,
                 firstSize = "",
                 firstDate = "",
-                сmpIcon = null,
+                сmpIcon = imagePath,
                 secondDate = "",
                 secondSize = "",
-                secondName = "",
-                status = ""
+                secondName = rightDirName == "" ? "" : rightDirName,
+                status = null,
+                directory = directory,
+                pathToCopy = pathToCopy == "" ? "" : pathToCopy
             };
         }
     }

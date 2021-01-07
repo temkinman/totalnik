@@ -101,23 +101,7 @@ namespace WpfTotalnik
             return btn;
         }
 
-        private GridView CreateGridView()
-        {
-            var factory = new FrameworkElementFactory(typeof(System.Windows.Controls.Image));
-            factory.SetValue(System.Windows.Controls.Image.SourceProperty, new Binding(nameof(MyViewItem.MyIcon)));
-            factory.SetValue(System.Windows.Controls.Image.HeightProperty, 30.0);
-            var dataTemplate = new DataTemplate { VisualTree = factory };
-
-            GridView grView = new GridView();
-            grView.Columns.Add(new GridViewColumn { Header = "Icon", Width = 30, CellTemplate = dataTemplate });
-            grView.Columns.Add(new GridViewColumn { Header = "Name", Width = 275, DisplayMemberBinding = new Binding(nameof(MyViewItem.Name)) });
-            grView.Columns.Add(new GridViewColumn { Header = "Type", Width = 60, DisplayMemberBinding = new Binding(nameof(MyViewItem.Type)) });
-            grView.Columns.Add(new GridViewColumn { Header = "Size", Width = 70, DisplayMemberBinding = new Binding(nameof(MyViewItem.Size)) });
-            grView.Columns.Add(new GridViewColumn { Header = "Date", Width = 120, DisplayMemberBinding = new Binding(nameof(MyViewItem.Date)) });
-            
-            return grView;
-        }
-
+        
         private ImageSource getIcon(string path)
         {
             Icon icon = ShellIcon.GetSmallIcon(path);
@@ -142,7 +126,7 @@ namespace WpfTotalnik
                     continue;
                 }
                 
-                listFiles.View = CreateGridView();
+                listFiles.View = MyGridView.CreateGridView();
                 list.Add(new MyViewItem { 
                     MyIcon = getIcon(dir.FullName),
                     Name = dir.Name, Type = "<DIR>",
@@ -157,7 +141,7 @@ namespace WpfTotalnik
                     continue;
                 }
 
-                listFiles.View = CreateGridView();
+                listFiles.View = MyGridView.CreateGridView();
                 list.Add(new MyViewItem {
                     MyIcon = getIcon(file.FullName),
                     Name = file.Name,
@@ -189,7 +173,7 @@ namespace WpfTotalnik
 
             if (DirInfo.Root.ToString() != DirInfo.FullName.ToString())
             {
-                listFiles.View = CreateGridView();
+                listFiles.View = MyGridView.CreateGridView();
                 list.Insert(0, noRootItem);
             }
             listFiles.ItemsSource = list;
